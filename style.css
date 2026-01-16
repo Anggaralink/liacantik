@@ -1,0 +1,173 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #020617;
+  color: #e5e7eb;
+  transition: 0.3s;
+}
+
+.dark {
+  background: #f8fafc;
+  color: #020617;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  background: rgba(2,6,23,0.95);
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  color: #38bdf8;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a, .nav-links button {
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+/* HERO */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.foto-profil {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #38bdf8;
+  margin-bottom: 20px;
+}
+
+.hero span {
+  color: #38bdf8;
+}
+
+/* ABOUT */
+.about {
+  padding: 70px 20px;
+}
+
+.about h2 {
+  text-align: center;
+  color: #38bdf8;
+  margin-bottom: 30px;
+}
+
+.about-content {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.foto-about {
+  width: 120px;
+  border-radius: 12px;
+}
+
+/* SKILL */
+.skill {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.skill-list span {
+  border: 1px solid #38bdf8;
+  padding: 10px 18px;
+  border-radius: 20px;
+  margin: 5px;
+  display: inline-block;
+}
+
+/* CONTACT */
+.contact {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 25px;
+  background: #38bdf8;
+  color: #020617;
+  border-radius: 25px;
+  text-decoration: none;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/* ANIMATION */
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 1s;
+}
+
+.fade.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #020617;
+    flex-direction: column;
+    width: 200px;
+    display: none;
+    padding: 15px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .about-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
